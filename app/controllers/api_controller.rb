@@ -5,4 +5,7 @@ class ApiController < ApplicationController
     }
     render json: { versions: versions }
   end
+
+  def v1
+  end
 end
