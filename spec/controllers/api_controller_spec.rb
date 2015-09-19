@@ -8,5 +8,14 @@ RSpec.describe ApiController, type: :controller do
       expect(response).to have_http_status(200)
     end
 
+    it 'returns the available api versions with url' do
+      get :root
+      json = {
+        versions: {
+          v1: 'http://test.host/v1'
+        }
+      }.to_json
+      expect(response.body).to eq(json)
+    end
   end
 end
