@@ -18,4 +18,7 @@ RSpec.describe ApiController, type: :controller do
       expect(response.body).to eq(json)
     end
   end
+
+  describe 'GET #v1' do
+  end
 end
