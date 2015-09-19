@@ -7,5 +7,6 @@ class ApiController < ApplicationController
   end
 
   def v1
+    render json: {}
   end
 end
