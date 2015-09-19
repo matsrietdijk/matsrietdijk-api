@@ -165,7 +165,7 @@ DEPENDENCIES
   arel!
   bundler (>= 1.10.6)
   byebug
-  pg
+  pg (~> 0.18.3)
   rack!
   rails!
   rspec-rails (~> 3.1.0)

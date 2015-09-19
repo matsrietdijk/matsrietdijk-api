@@ -11,7 +11,7 @@ gem 'arel', github: 'rails/arel'
 gem 'rack', github: 'rack/rack'
 
 # Use postgresql as the database for Active Record
-gem 'pg'
+gem 'pg', '~> 0.18.3'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
