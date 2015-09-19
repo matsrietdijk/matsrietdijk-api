@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.2.2'
 
+gem 'bundler', '>= 1.10.6'
 gem 'rails', github: 'rails/rails'
 gem 'sprockets-rails', github: 'rails/sprockets-rails'
 gem 'sprockets', github: 'rails/sprockets'
