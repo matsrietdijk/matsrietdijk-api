@@ -15,8 +15,7 @@ gem 'pg', '~> 0.18.3'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use Unicorn as the app server
-# gem 'unicorn'
+gem 'puma', '~> 2.14.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -40,6 +39,10 @@ end
 
 group :test do
   gem 'codeclimate-test-reporter', '~> 0.4.8', require: nil
+end
+
+group :production do
+  gem 'rails_12factor', '~> 0.0.3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
