@@ -22,3 +22,7 @@ Within this project the following flow is used regarding version/source control:
 The categories that are used in this project for branches are:
 
 `feature`, `patch`, `update` and `release`
+
+# Deployment
+
+Deployment is automated with a heroku webhook. When a PR is merged into `master` and travis-ci returns a positive build result heroko deploys the application to `matsrietdijk-api.herokuapp.com`.
