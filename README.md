@@ -26,3 +26,5 @@ The categories that are used in this project for branches are:
 # Deployment
 
 Deployment is automated with a heroku webhook. When a PR is merged into `master` and travis-ci returns a positive build result heroko deploys the application to [matsrietdijk-api.herokuapp.com](https://matsrietdijk-api.herokuapp.com).
+
+Commits containing `[ci skip]` will not be deployed automatically as travis-ci ignores these commits and therefor never returns a build status.
