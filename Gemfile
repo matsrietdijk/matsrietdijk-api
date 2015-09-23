@@ -27,13 +27,12 @@ gem 'active_model_serializers', '~> 0.10.0.rc2'
 # gem 'rack-cors'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'rubocop', '~> 0.34.1', require: false
   gem 'rspec-rails', '~> 3.1.0'
   gem 'byebug'
 end
 
 group :development do
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
 
