@@ -27,7 +27,7 @@ gem 'active_model_serializers', '~> 0.10.0.rc2'
 # gem 'rack-cors'
 
 group :development, :test do
-  gem 'rubocop', '~> 0.34.1', require: false
+  gem 'rubocop', '~> 0.34.2', require: false
   gem 'rspec-rails', '~> 3.1.0'
   gem 'byebug'
 end
