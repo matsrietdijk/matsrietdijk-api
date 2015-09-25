@@ -98,6 +98,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    aasm (4.3.0)
     active_model_serializers (0.10.0.rc3)
       actionpack (>= 4.0)
       activemodel (>= 4.0)
@@ -188,6 +189,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aasm (~> 4.3.0)
   active_model_serializers (~> 0.10.0.rc2)
   arel!
   bundler (>= 1.10.6)
