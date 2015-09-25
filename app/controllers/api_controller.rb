@@ -7,6 +7,9 @@ class ApiController < ApplicationController
   end
 
   def v1
-    render json: {}
+    endpoints = {
+      posts: v1_posts_url
+    }
+    render json: { endpoints: endpoints }
   end
 end
