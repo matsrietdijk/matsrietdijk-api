@@ -1,7 +1,7 @@
 module V1
   class PostsController < ::V1::ApplicationController
     def index
-      @posts = Post.all
+      @posts = Post.published
       render json: @posts
     end
   end
