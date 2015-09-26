@@ -9,10 +9,10 @@ RSpec.describe V1::PostsController, type: :controller do
     end
 
     it 'assigns published posts to @posts' do
-      published_post = Post.create(state: :published, title: '', body: '')
-      Post.create(title: '', body: '')
+      published_posts = create_list(:post, 2, :published)
+      create(:post, :concept)
       get :index
-      expect(assigns(:posts)).to eq([published_post])
+      expect(assigns(:posts)).to eq(published_posts)
     end
   end
 end
