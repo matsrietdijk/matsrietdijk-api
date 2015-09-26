@@ -28,6 +28,7 @@ gem 'active_model_serializers', '~> 0.10.0.rc2'
 gem 'aasm', '~> 4.3.0'
 
 group :development, :test do
+  gem 'factory_girl', '~> 4.5.0'
   gem 'rubocop', '~> 0.34.2', require: false
   gem 'rspec-rails', '~> 3.1.0'
   gem 'rails-controller-testing', '~> 0.0.3'
