@@ -8,6 +8,13 @@ RSpec.describe V1::PostsController, type: :controller do
       expect(response).to have_http_status(200)
     end
 
+    it 'responds with published posts json' do
+      published_posts = create_list(:post, 2, :published)
+      serializable = ActiveModel::SerializableResource.new(published_posts)
+      get :index
+      expect(response.body).to eq(serializable.to_json)
+    end
+
     it 'assigns published posts to @posts' do
       published_posts = create_list(:post, 2, :published)
       create(:post, :concept)
