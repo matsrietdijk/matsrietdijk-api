@@ -27,6 +27,16 @@ RSpec.describe Post, type: :model do
   end
 
   context '#' do
+    describe 'unpublish' do
+      it 'changes published posts state to concept' do
+        expect { published_post.unpublish }.to change { published_post.state }.to('concept')
+      end
+
+      it 'throws an error on concept posts' do
+        expect { concept_post.unpublish }.to raise_error
+      end
+    end
+
     describe 'publish' do
       it 'changes concept posts state to published' do
         expect { concept_post.publish }.to change { concept_post.state }.to('published')
