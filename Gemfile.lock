@@ -201,6 +201,7 @@ DEPENDENCIES
   rspec-rails (~> 3.1.0)
   rubocop (~> 0.34.2)
   sass-rails!
+  simplecov (~> 0.10.0)
   spring
   sprockets!
   sprockets-rails!

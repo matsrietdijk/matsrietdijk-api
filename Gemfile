@@ -37,7 +37,8 @@ group :development do
 end
 
 group :test do
-  gem 'codeclimate-test-reporter', '~> 0.4.8', require: nil
+  gem 'simplecov', '~> 0.10.0', require: false
+  gem 'codeclimate-test-reporter', '~> 0.4.8', require: false
 end
 
 group :production do
