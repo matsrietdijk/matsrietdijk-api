@@ -22,13 +22,17 @@ class Post < ActiveRecord::Base
 
   def self.index_meta
     {
-      filters: {
-        page: { type: :integer, default: 1, min: 1 },
-        count: { type: :integer, default: DEFAULT_COUNT, min: 1, max: MAX_COUNT }
-      },
+      filters: filters,
       page: all.current_page,
       count: all.limit_value,
       total_count: all.total_count
+    }
+  end
+
+  def self.filters
+    {
+      page: { type: :integer, default: 1, min: 1 },
+      count: { type: :integer, default: DEFAULT_COUNT, min: 1, max: MAX_COUNT }
     }
   end
 end
