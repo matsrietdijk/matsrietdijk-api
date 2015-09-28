@@ -1,4 +1,7 @@
 class Post < ActiveRecord::Base
+  DEFAULT_COUNT = 25
+  MAX_COUNT = 50
+
   include AASM
 
   aasm column: :state do
@@ -13,4 +16,7 @@ class Post < ActiveRecord::Base
       transitions from: :published, to: :concept
     end
   end
+
+  paginates_per DEFAULT_COUNT
+  max_paginates_per MAX_COUNT
 end
