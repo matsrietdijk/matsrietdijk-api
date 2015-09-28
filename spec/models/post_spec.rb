@@ -26,6 +26,26 @@ RSpec.describe Post, type: :model do
     end
   end
 
+  context '.' do
+    context 'page' do
+      describe 'index_meta' do
+        subject { Post.page.index_meta }
+
+        it 'should contain meta keys' do
+          expect(subject.keys).to eq([:filters, :page, :count, :total_count])
+        end
+      end
+    end
+
+    describe 'filters' do
+      subject { Post.filters }
+
+      it 'should contain possible filter keys' do
+        expect(subject.keys).to eq([:page, :count])
+      end
+    end
+  end
+
   context '#' do
     describe 'unpublish' do
       it 'changes published posts state to concept' do
