@@ -19,4 +19,16 @@ class Post < ActiveRecord::Base
 
   paginates_per DEFAULT_COUNT
   max_paginates_per MAX_COUNT
+
+  def self.index_meta
+    {
+      filters: {
+        page: { type: :integer, default: 1, min: 1 },
+        count: { type: :integer, default: DEFAULT_COUNT, min: 1, max: MAX_COUNT }
+      },
+      page: all.current_page,
+      count: all.limit_value,
+      total_count: all.total_count
+    }
+  end
 end
