@@ -34,11 +34,11 @@ group :development, :test do
   gem 'rubocop', '~> 0.34.2', require: false
   gem 'rspec-rails', '~> 3.1.0'
   gem 'rails-controller-testing', '~> 0.0.3'
-  gem 'byebug'
 end
 
 group :development do
   gem 'spring'
+  gem 'pry', '~> 0.10.2'
 end
 
 group :test do
