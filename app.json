@@ -1,0 +1,6 @@
+{
+  "name": "Mats Rietdijk API",
+  "description": "My Rails 5 API",
+  "repository": "https://github.com/matsrietdijk/matsrietdijk-api",
+  "keywords": ["rails", "api", "discoverable"]
+}
