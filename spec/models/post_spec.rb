@@ -34,6 +34,23 @@ RSpec.describe Post, type: :model do
         it 'should contain meta keys' do
           expect(subject.keys).to eq([:filters, :page, :count, :total_count])
         end
+
+        it 'should use class wide filters as filters' do
+          expect(subject[:filters]).to eq(Post.filters)
+        end
+
+        it 'should return total amount of posts for total_count' do
+          create_list(:post, rand(1...3))
+          expect(subject[:total_count]).to eq(Post.count)
+        end
+
+        it 'should have page set to filters.page.default' do
+          expect(subject[:page]).to eq(subject[:filters][:page][:default])
+        end
+
+        it 'should have count set to filters.count.default' do
+          expect(subject[:count]).to eq(subject[:filters][:count][:default])
+        end
       end
     end
 
@@ -42,6 +59,22 @@ RSpec.describe Post, type: :model do
 
       it 'should contain possible filter keys' do
         expect(subject.keys).to eq([:page, :count])
+      end
+
+      it 'should have a default page of 1' do
+        expect(subject[:page][:default]).to eq(1)
+      end
+
+      it 'should have a min page of 1' do
+        expect(subject[:page][:min]).to eq(1)
+      end
+
+      it 'should use class wide default for count' do
+        expect(subject[:count][:default]).to eq(Post::DEFAULT_COUNT)
+      end
+
+      it 'should use class wide max for count' do
+        expect(subject[:count][:max]).to eq(Post::MAX_COUNT)
       end
     end
   end
