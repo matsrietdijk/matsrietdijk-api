@@ -16,8 +16,10 @@ Within this project the following flow is used regarding version/source control:
 - All changes are made and committed on a dedicated branch (except documentation changes)
 - Branches are categorized by prefixing the branch name, example: `feature/flow`
 - Pull Requests (PR) are used to merge changes into the `master` branch
-- Travis-ci should return a positive build result before a PR is merged
-- CodeClimate should not report any issues before a PR is merged
+- Before a PR is merged:
+  - [Travis-CI](https://travis-ci.org/matsrietdijk/matsrietdijk-api/pull_requests) should return a positive build result
+  - [CodeClimate](https://codeclimate.com/github/matsrietdijk/matsrietdijk-api/branches) should not report any issues
+  - RuboCop should not report any offences
 
 The categories that are used in this project for branches are:
 
@@ -25,10 +27,11 @@ The categories that are used in this project for branches are:
 
 # Deployment
 
-Deployment is automated with a heroku webhook. When a PR is merged into `master` and travis-ci returns a positive build result heroko deploys the application to [matsrietdijk-api.herokuapp.com](https://matsrietdijk-api.herokuapp.com).
+Deployment is automated with a Heroku webhook. When a PR is merged into `master` and Travis-CI returns a positive build result Heroku deploys
+the application to [matsrietdijk-api.herokuapp.com](https://matsrietdijk-api.herokuapp.com).
 
-Commits containing `[ci skip]` will not be deployed automatically as travis-ci ignores these commits and therefor never returns a build status.
+Commits containing `[ci skip]` will not be deployed automatically as Travis-CI ignores these commits and therefor never returns a build status.
 
-Deploying your own version of this application, completely free of charge, is as easy as clicking the deploy button below.
+Deploying your own version of this application to Heroku, completely free of charge, is as easy as clicking the deploy button below.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
