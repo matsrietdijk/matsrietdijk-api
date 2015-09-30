@@ -38,7 +38,7 @@ end
 
 group :development do
   gem 'spring'
-  gem 'pry', '~> 0.10.2'
+  gem 'pry-byebug', '~> 3.2.0'
 end
 
 group :test do
