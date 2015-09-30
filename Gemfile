@@ -25,15 +25,20 @@ gem 'active_model_serializers', '~> 0.10.0.rc2'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
+gem 'aasm', '~> 4.3.0'
+gem 'kaminari', '~> 0.16.3'
 
 group :development, :test do
+  gem 'factory_girl_rails', '~> 4.5.0'
+  gem 'faker', '~> 1.5.0'
   gem 'rubocop', '~> 0.34.2', require: false
   gem 'rspec-rails', '~> 3.1.0'
-  gem 'byebug'
+  gem 'rails-controller-testing', '~> 0.0.3'
 end
 
 group :development do
   gem 'spring'
+  gem 'pry-byebug', '~> 3.2.0'
 end
 
 group :test do

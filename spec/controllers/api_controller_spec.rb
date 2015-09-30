@@ -25,5 +25,15 @@ RSpec.describe ApiController, type: :controller do
       expect(response).to be_success
       expect(response).to have_http_status(200)
     end
+
+    it 'returns the root level endpoints' do
+      get :v1
+      json = {
+        endpoints: {
+          posts: 'http://test.host/v1/posts'
+        }
+      }.to_json
+      expect(response.body).to eq(json)
+    end
   end
 end
