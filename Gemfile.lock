@@ -112,11 +112,29 @@ GEM
     builder (3.2.2)
     byebug (5.0.0)
       columnize (= 0.9.0)
+    celluloid (0.17.2)
+      celluloid-essentials
+      celluloid-extras
+      celluloid-fsm
+      celluloid-pool
+      celluloid-supervision
+      timers (>= 4.1.1)
+    celluloid-essentials (0.20.5)
+      timers (>= 4.1.1)
+    celluloid-extras (0.20.5)
+      timers (>= 4.1.1)
+    celluloid-fsm (0.20.5)
+      timers (>= 4.1.1)
+    celluloid-pool (0.20.5)
+      timers (>= 4.1.1)
+    celluloid-supervision (0.20.5)
+      timers (>= 4.1.1)
     codeclimate-test-reporter (0.4.8)
       simplecov (>= 0.7.1, < 1.0.0)
     coderay (1.1.0)
     columnize (0.9.0)
     concurrent-ruby (1.0.0.pre2)
+    connection_pool (2.2.0)
     diff-lcs (1.2.5)
     docile (1.1.5)
     erubis (2.7.0)
@@ -129,6 +147,7 @@ GEM
       i18n (~> 0.5)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    hitimes (1.2.3)
     i18n (0.7.0)
     json (1.8.3)
     kaminari (0.16.3)
@@ -176,6 +195,9 @@ GEM
     rails_stdout_logging (0.0.4)
     rainbow (2.0.0)
     rake (10.4.2)
+    redis (3.2.1)
+    redis-namespace (1.5.2)
+      redis (~> 3.0, >= 3.0.4)
     rspec-core (3.1.7)
       rspec-support (~> 3.1.0)
     rspec-expectations (3.1.2)
@@ -200,6 +222,12 @@ GEM
       ruby-progressbar (~> 1.4)
     ruby-progressbar (1.7.5)
     sass (3.4.18)
+    sidekiq (3.5.0)
+      celluloid (~> 0.17.0)
+      connection_pool (~> 2.2, >= 2.2.0)
+      json (~> 1.0)
+      redis (~> 3.2, >= 3.2.1)
+      redis-namespace (~> 1.5, >= 1.5.2)
     simplecov (0.10.0)
       docile (~> 1.1.0)
       json (~> 1.8)
@@ -209,6 +237,8 @@ GEM
     spring (1.4.0)
     thor (0.19.1)
     thread_safe (0.3.5)
+    timers (4.1.1)
+      hitimes
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
 
@@ -235,6 +265,7 @@ DEPENDENCIES
   rspec-rails (~> 3.1.0)
   rubocop (~> 0.34.2)
   sass-rails!
+  sidekiq (~> 3.5.0)
   simplecov (~> 0.10.0)
   spring
   sprockets!

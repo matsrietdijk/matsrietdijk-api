@@ -28,6 +28,7 @@ gem 'active_model_serializers', '~> 0.10.0.rc2'
 gem 'aasm', '~> 4.3.0'
 gem 'kaminari', '~> 0.16.3'
 gem 'airbrake', '~> 4.3.1'
+gem 'sidekiq', '~> 3.5.0'
 
 group :development, :test do
   gem 'factory_girl_rails', '~> 4.5.0'
