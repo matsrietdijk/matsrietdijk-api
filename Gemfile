@@ -32,6 +32,7 @@ group :development, :test do
   gem 'factory_girl_rails', '~> 4.5.0'
   gem 'faker', '~> 1.5.0'
   gem 'rubocop', '~> 0.34.2', require: false
+  gem 'rubocop-rspec', '~> 1.3.1'
   gem 'rspec-rails', '~> 3.1.0'
   gem 'rails-controller-testing', '~> 0.0.3'
 end
