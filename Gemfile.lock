@@ -230,7 +230,7 @@ DEPENDENCIES
   rails_12factor (~> 0.0.3)
   rspec-rails (~> 3.1.0)
   rubocop (~> 0.34.2)
-  rubocop-rspec
+  rubocop-rspec (~> 1.3.1)
   sass-rails!
   simplecov (~> 0.10.0)
   spring
