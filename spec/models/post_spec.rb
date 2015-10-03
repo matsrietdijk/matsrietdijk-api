@@ -6,22 +6,22 @@ RSpec.describe Post, type: :model do
 
   context 'scopes' do
     describe 'concept' do
-      it 'should include concept posts' do
-        expect(Post.concept).to include(concept_post)
+      it 'includes concept posts' do
+        expect(described_class.concept).to include(concept_post)
       end
 
-      it 'should exclude published posts' do
-        expect(Post.concept).to_not include(published_post)
+      it 'excludes published posts' do
+        expect(described_class.concept).to_not include(published_post)
       end
     end
 
     describe 'published' do
-      it 'should exclude concept posts' do
-        expect(Post.published).to_not include(concept_post)
+      it 'excludes concept posts' do
+        expect(described_class.published).to_not include(concept_post)
       end
 
-      it 'should include published posts' do
-        expect(Post.published).to include(published_post)
+      it 'includes published posts' do
+        expect(described_class.published).to include(published_post)
       end
     end
   end
@@ -29,52 +29,52 @@ RSpec.describe Post, type: :model do
   context '.' do
     context 'page' do
       describe 'index_meta' do
-        subject { Post.page.index_meta }
+        subject { described_class.page.index_meta }
 
-        it 'should contain meta keys' do
+        it 'contains meta keys' do
           expect(subject.keys).to eq([:filters, :page, :count, :total_count])
         end
 
-        it 'should use class wide filters as filters' do
-          expect(subject[:filters]).to eq(Post.filters)
+        it 'uses class wide filters as filters' do
+          expect(subject[:filters]).to eq(described_class.filters)
         end
 
-        it 'should return total amount of posts for total_count' do
+        it 'returns total amount of posts for total_count' do
           create_list(:post, rand(1...3))
-          expect(subject[:total_count]).to eq(Post.count)
+          expect(subject[:total_count]).to eq(described_class.count)
         end
 
-        it 'should have page set to filters.page.default' do
+        it 'has page set to filters.page.default' do
           expect(subject[:page]).to eq(subject[:filters][:page][:default])
         end
 
-        it 'should have count set to filters.count.default' do
+        it 'has count set to filters.count.default' do
           expect(subject[:count]).to eq(subject[:filters][:count][:default])
         end
       end
     end
 
     describe 'filters' do
-      subject { Post.filters }
+      subject { described_class.filters }
 
-      it 'should contain possible filter keys' do
+      it 'contains possible filter keys' do
         expect(subject.keys).to eq([:page, :count])
       end
 
-      it 'should have a default page of 1' do
+      it 'has a default page of 1' do
         expect(subject[:page][:default]).to eq(1)
       end
 
-      it 'should have a min page of 1' do
+      it 'has a min page of 1' do
         expect(subject[:page][:min]).to eq(1)
       end
 
-      it 'should use class wide default for count' do
-        expect(subject[:count][:default]).to eq(Post::DEFAULT_COUNT)
+      it 'uses class wide default for count' do
+        expect(subject[:count][:default]).to eq(described_class::DEFAULT_COUNT)
       end
 
-      it 'should use class wide max for count' do
-        expect(subject[:count][:max]).to eq(Post::MAX_COUNT)
+      it 'uses class wide max for count' do
+        expect(subject[:count][:max]).to eq(described_class::MAX_COUNT)
       end
     end
   end

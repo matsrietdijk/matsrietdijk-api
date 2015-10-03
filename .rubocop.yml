@@ -1,7 +1,10 @@
+require: rubocop-rspec
+
 AllCops:
   Exclude:
     - 'db/schema.rb'
-    - 'bin/*'
+    - 'bin/**/*'
+    - 'vendor/**/*'
   RunRailsCops: true
 
 Style/Documentation:
