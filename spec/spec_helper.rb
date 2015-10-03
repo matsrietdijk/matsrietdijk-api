@@ -1,8 +1,10 @@
+require 'simplecov'
+SimpleCov.add_filter 'config/initializers/airbrake.rb'
+SimpleCov.add_filter 'config/initializers/sidekiq.rb'
 if ENV['CI']
   require 'codeclimate-test-reporter'
   CodeClimate::TestReporter.start
 else
-  require 'simplecov'
   SimpleCov.start
 end
 
