@@ -13,3 +13,7 @@
 !/log/.keep
 !/tmp/.keep
 /coverage/*
+
+# Ignore local config
+/.env
+/Procfile.dev
