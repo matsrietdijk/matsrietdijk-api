@@ -35,3 +35,26 @@ Commits containing `[ci skip]` will not be deployed automatically as Travis-CI i
 Deploying your own version of this application to Heroku, completely free of charge, is as easy as clicking the deploy button below.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+# Sidekiq
+
+[Sidekiq](http://sidekiq.org) is used to perform tasks (called jobs) outside the web process, this to avoid blocking requests. Sidekiq depends on Redis to store its job queue.
+
+Configure Sidekiq with:
+
+- `REDIS_URL`: the URL to your Redis instance, default: `redis://0.0.0.0:6379`
+- `REDIS_NAMESPACE`: set to use a custom namespace, default: `matsrietdijk-api-#{Rails.env}`
+
+# Airbrake
+
+[Airbrake](https://airbrake.io) is used to report runtime errors, which it does by sending a notice to the configured Airbrake host whenever an error is not caught by the application.
+By default Airbrake is turned off, to enable Airbrake at least set the API key.
+
+Configure Airbrake with:
+
+- `AIRBRAKE_API_KEY`: your personal API key provided by your Airbrake host
+- `AIRBRAKE_HOST`: the notice receiving host, default: `api.airbrake.io`
+- `AIRBRAKE_PORT`: the port to send the notice to, default: `80` unless secure is `false` else `443`
+- `AIRBRAKE_SECURE`: set to `true` when using a secure connection, default: `false` unless port is `443` then `true`
+- `AIRBRAKE_SIDEKIQ`: set to `true` to use Sidekiq to handle notices, default: `false`
+- `AIRBRAKE_DEV`: set to `true` to enable airbrake in `development` environment, default: `false`
