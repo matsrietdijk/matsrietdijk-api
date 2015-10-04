@@ -54,7 +54,7 @@ Configure Airbrake with:
 
 - `AIRBRAKE_API_KEY`: your personal API key provided by your Airbrake host
 - `AIRBRAKE_HOST`: the notice receiving host, default: `api.airbrake.io`
-- `AIRBRAKE_PORT`: the port to send the notice to, default: `80` unless secure is `false` else `443`
+- `AIRBRAKE_PORT`: the port to send the notice to, default: `80` unless secure is `true` then `443`
 - `AIRBRAKE_SECURE`: set to `true` when using a secure connection, default: `false` unless port is `443` then `true`
 - `AIRBRAKE_SIDEKIQ`: set to `true` to use Sidekiq to handle notices, default: `false`
 - `AIRBRAKE_DEV`: set to `true` to enable airbrake in `development` environment, default: `false`
