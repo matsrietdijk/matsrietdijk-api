@@ -34,4 +34,3 @@ deploy:
   run:
     - 'bundle exec rake db:migrate'
     - restart
-    - 'bundle exec rake airbrake:deploy'
