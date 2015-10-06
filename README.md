@@ -20,6 +20,7 @@ Within this project the following flow is used regarding version/source control:
   - [Travis-CI](https://travis-ci.org/matsrietdijk/matsrietdijk-api/pull_requests) should return a positive build result
   - [CodeClimate](https://codeclimate.com/github/matsrietdijk/matsrietdijk-api/branches) should not report any issues
   - RuboCop should not report any offences
+  - Brakeman should not report any serious warnings
 
 The categories that are used in this project for branches are:
 
