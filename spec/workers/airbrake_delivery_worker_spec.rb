@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe AirbrakeDeliveryWorker, type: :worker do
-  it { is_expected.to be_processed_in :default }
+  it { is_expected.to be_processed_in :errors }
   it { is_expected.to be_retryable 5 }
 
   it 'passes notice to airbrake' do
