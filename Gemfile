@@ -48,6 +48,7 @@ end
 group :test do
   gem 'simplecov', '~> 0.10.0', require: false
   gem 'codeclimate-test-reporter', '~> 0.4.8', require: false
+  gem 'rspec-sidekiq', '~> 2.1.0'
 end
 
 group :production do
