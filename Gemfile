@@ -36,8 +36,6 @@ group :development, :test do
   gem 'rubocop', '~> 0.34.2', require: false
   gem 'rubocop-rspec', '~> 1.3.1'
   gem 'brakeman', '~> 3.1.1', require: false
-  gem 'rspec-rails', '~> 3.1.0'
-  gem 'rails-controller-testing', '~> 0.0.3'
 end
 
 group :development do
@@ -48,7 +46,9 @@ end
 group :test do
   gem 'simplecov', '~> 0.10.0', require: false
   gem 'codeclimate-test-reporter', '~> 0.4.8', require: false
+  gem 'rspec-rails', '~> 3.1.0'
   gem 'rspec-sidekiq', '~> 2.1.0'
+  gem 'rails-controller-testing', '~> 0.0.3'
 end
 
 group :production do
