@@ -15,4 +15,5 @@ RSpec.describe User, type: :model do
   end
 
   it { is_expected.to allow_value(nil).for(:api_token) }
+  it { is_expected.to validate_length_of(:api_token).is_equal_to(User::API_TOKEN_LENGTH) }
 end
