@@ -48,6 +48,7 @@ group :test do
   gem 'codeclimate-test-reporter', '~> 0.4.8', require: false
   gem 'rspec-rails', '~> 3.1.0'
   gem 'rspec-sidekiq', '~> 2.1.0'
+  gem 'rspec-its', '~> 1.2.0'
   gem 'shoulda-matchers', '~> 2.8.0'
   gem 'rails-controller-testing', '~> 0.0.3'
 end
