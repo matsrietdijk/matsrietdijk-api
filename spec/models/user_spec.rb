@@ -16,4 +16,12 @@ RSpec.describe User, type: :model do
 
   it { is_expected.to allow_value(nil).for(:api_token) }
   it { is_expected.to validate_length_of(:api_token).is_equal_to(User::API_TOKEN_LENGTH) }
+
+  context '.' do
+    describe 'create' do
+      subject { create(:user, api_token: nil) }
+
+      its(:api_token) { is_expected.to be_present }
+    end
+  end
 end
