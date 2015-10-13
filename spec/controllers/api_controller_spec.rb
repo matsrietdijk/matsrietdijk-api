@@ -2,38 +2,34 @@ require 'rails_helper'
 
 RSpec.describe ApiController, type: :controller do
   describe 'GET #root' do
-    it 'responds successfully with status 200' do
-      get :root
-      expect(response).to be_success
-      expect(response).to have_http_status(200)
-    end
-
-    it 'returns the available api versions with url' do
-      get :root
-      json = {
+    let(:json) do
+      {
         versions: {
           v1: 'http://test.host/v1'
         }
       }.to_json
-      expect(response.body).to eq(json)
     end
+
+    before { get :root }
+
+    it { is_expected.to respond_with(200) }
+    its(:response) { is_expected.to be_success }
+    its('response.body') { is_expected.to eq(json) }
   end
 
   describe 'GET #v1' do
-    it 'responds successfully with status 200' do
-      get :v1
-      expect(response).to be_success
-      expect(response).to have_http_status(200)
-    end
-
-    it 'returns the root level endpoints' do
-      get :v1
-      json = {
+    let(:json) do
+      {
         endpoints: {
           posts: 'http://test.host/v1/posts'
         }
       }.to_json
-      expect(response.body).to eq(json)
     end
+
+    before { get :v1 }
+
+    it { is_expected.to respond_with(200) }
+    its(:response) { is_expected.to be_success }
+    its('response.body') { is_expected.to eq(json) }
   end
 end
