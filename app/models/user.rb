@@ -5,8 +5,12 @@ class User < ActiveRecord::Base
 
   before_create :generate_api_token
 
-  validates :username, presence: true, uniqueness: true
-  validates :api_token, allow_nil: true, uniqueness: true, length: { is: API_TOKEN_LENGTH }
+  validates :username, presence: true,
+                       uniqueness: true,
+                       format: { with: /\A[a-z0-9]+(_?[a-z0-9]+)*\z/ }
+  validates :api_token, allow_nil: true,
+                        uniqueness: true,
+                        length: { is: API_TOKEN_LENGTH }
 
   private
 
