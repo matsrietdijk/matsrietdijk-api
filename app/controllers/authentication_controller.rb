@@ -8,6 +8,6 @@ class AuthenticationController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :password)
+    params.fetch(:user, {}).permit(:username, :password)
   end
 end
