@@ -12,9 +12,7 @@ RSpec.describe ApiController, type: :controller do
 
     before { get :root }
 
-    it { is_expected.to respond_with(200) }
-    its(:response) { is_expected.to be_success }
-    its('response.body') { is_expected.to eq(json) }
+    it_behaves_like 'a successful responder', :json
   end
 
   describe 'GET #v1' do
@@ -28,8 +26,6 @@ RSpec.describe ApiController, type: :controller do
 
     before { get :v1 }
 
-    it { is_expected.to respond_with(200) }
-    its(:response) { is_expected.to be_success }
-    its('response.body') { is_expected.to eq(json) }
+    it_behaves_like 'a successful responder', :json
   end
 end
