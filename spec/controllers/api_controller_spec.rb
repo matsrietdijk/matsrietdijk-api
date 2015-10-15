@@ -10,9 +10,22 @@ RSpec.describe ApiController, type: :controller do
       }.to_json
     end
 
-    before { get :root }
+    context 'guest' do
+      before { get :root }
 
-    it_behaves_like 'a successful responder', :json
+      it_behaves_like 'a successful responder', :json
+    end
+
+    context 'authenticated user' do
+      let(:user) { create(:user) }
+
+      before do
+        authenticate user
+        get :root
+      end
+
+      it_behaves_like 'a successful responder', :json
+    end
   end
 
   describe 'GET #v1' do
@@ -24,8 +37,21 @@ RSpec.describe ApiController, type: :controller do
       }.to_json
     end
 
-    before { get :v1 }
+    context 'guest' do
+      before { get :v1 }
 
-    it_behaves_like 'a successful responder', :json
+      it_behaves_like 'a successful responder', :json
+    end
+
+    context 'authenticated user' do
+      let(:user) { create(:user) }
+
+      before do
+        authenticate user
+        get :v1
+      end
+
+      it_behaves_like 'a successful responder', :json
+    end
   end
 end
