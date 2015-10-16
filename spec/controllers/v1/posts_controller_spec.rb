@@ -17,7 +17,7 @@ RSpec.describe V1::PostsController, type: :controller do
         expect(response.body).to eq(serializable.to_json)
       end
 
-      it 'assigns published posts to @posts' do
+      it 'assigns published posts paginated to @posts' do
         published_posts = create_list(:post, 2, :published)
         create(:post, :concept)
         get :index
@@ -46,11 +46,11 @@ RSpec.describe V1::PostsController, type: :controller do
         expect(response.body).to eq(serializable.to_json)
       end
 
-      it 'assigns all posts to @posts' do
+      it 'assigns all posts paginated to @posts' do
         create_list(:post, 2, :published)
         create_list(:post, 2, :concept)
         get :index
-        expect(assigns(:posts)).to eq(Post.all)
+        expect(assigns(:posts)).to eq(Post.page)
       end
     end
   end
