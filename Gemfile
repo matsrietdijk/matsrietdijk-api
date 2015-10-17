@@ -13,7 +13,7 @@ gem 'rack', github: 'rack/rack'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18.3'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.10'
 
 gem 'puma', '~> 2.14.0'
 
@@ -27,7 +27,7 @@ gem 'active_model_serializers', '~> 0.10.0.rc2'
 # gem 'rack-cors'
 gem 'aasm', '~> 4.3.0'
 gem 'kaminari', '~> 0.16.3'
-gem 'airbrake', '~> 4.3.1'
+gem 'airbrake', '~> 4.3.2'
 gem 'sidekiq', '~> 3.5.0'
 
 group :development, :test do
@@ -36,8 +36,6 @@ group :development, :test do
   gem 'rubocop', '~> 0.34.2', require: false
   gem 'rubocop-rspec', '~> 1.3.1'
   gem 'brakeman', '~> 3.1.1', require: false
-  gem 'rspec-rails', '~> 3.1.0'
-  gem 'rails-controller-testing', '~> 0.0.3'
 end
 
 group :development do
@@ -48,7 +46,11 @@ end
 group :test do
   gem 'simplecov', '~> 0.10.0', require: false
   gem 'codeclimate-test-reporter', '~> 0.4.8', require: false
+  gem 'rspec-rails', '~> 3.1.0'
   gem 'rspec-sidekiq', '~> 2.1.0'
+  gem 'rspec-its', '~> 1.2.0'
+  gem 'shoulda-matchers', '~> 2.8.0'
+  gem 'rails-controller-testing', '~> 0.0.3'
 end
 
 group :production do

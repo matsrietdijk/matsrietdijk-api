@@ -4,5 +4,7 @@ Rails.application.routes.draw do
     resources :posts, only: :index
   end
 
+  post :authenticate, to: 'authentication#authenticate'
+
   root to: 'api#root'
 end
