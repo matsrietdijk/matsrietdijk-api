@@ -12,7 +12,8 @@ RSpec.describe V1::PostsController, type: :controller do
       it 'responds with published posts json' do
         published_posts = create_list(:post, 2, :published)
         meta = Post.published.page.index_meta
-        serializable = ActiveModel::SerializableResource.new(published_posts, meta: meta)
+        data = [published_posts, meta: meta, each_serializer: Public::PostSerializer]
+        serializable = ActiveModel::SerializableResource.new(*data)
         get :index
         expect(response.body).to eq(serializable.to_json)
       end
@@ -41,7 +42,8 @@ RSpec.describe V1::PostsController, type: :controller do
         create_list(:post, 2, :concept)
         all_posts = Post.page
         meta = all_posts.index_meta
-        serializable = ActiveModel::SerializableResource.new(all_posts, meta: meta)
+        data = [all_posts, meta: meta, each_serializer: Admin::PostSerializer]
+        serializable = ActiveModel::SerializableResource.new(*data)
         get :index
         expect(response.body).to eq(serializable.to_json)
       end
