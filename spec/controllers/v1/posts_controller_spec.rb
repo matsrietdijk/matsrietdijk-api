@@ -24,6 +24,12 @@ RSpec.describe V1::PostsController, type: :controller do
         get :index
         expect(assigns(:posts)).to eq(published_posts)
       end
+
+      it 'contains keys' do
+        get :index
+        body_hash = JSON.parse(response.body, symbolize_names: true)
+        expect(body_hash.keys).to eq([:posts, :meta])
+      end
     end
 
     context 'authenticated user' do
@@ -53,6 +59,12 @@ RSpec.describe V1::PostsController, type: :controller do
         create_list(:post, 2, :concept)
         get :index
         expect(assigns(:posts)).to eq(Post.page)
+      end
+
+      it 'contains keys' do
+        get :index
+        body_hash = JSON.parse(response.body, symbolize_names: true)
+        expect(body_hash.keys).to eq([:posts, :meta])
       end
     end
   end
