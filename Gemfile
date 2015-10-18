@@ -21,14 +21,14 @@ gem 'puma', '~> 2.14.0'
 # gem 'capistrano-rails', group: :development
 
 # Use ActiveModelSerializers to serialize JSON responses
-gem 'active_model_serializers', '~> 0.10.0.rc2'
+gem 'active_model_serializers', '~> 0.10.0.rc3'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 gem 'aasm', '~> 4.3.0'
 gem 'kaminari', '~> 0.16.3'
 gem 'airbrake', '~> 4.3.2'
-gem 'sidekiq', '~> 3.5.0'
+gem 'sidekiq', '~> 3.5.1'
 
 group :development, :test do
   gem 'factory_girl_rails', '~> 4.5.0'
@@ -49,7 +49,7 @@ group :test do
   gem 'rspec-rails', '~> 3.1.0'
   gem 'rspec-sidekiq', '~> 2.1.0'
   gem 'rspec-its', '~> 1.2.0'
-  gem 'shoulda-matchers', '~> 2.8.0'
+  gem 'shoulda-matchers', '~> 3.0.0'
   gem 'rails-controller-testing', '~> 0.0.3'
 end
 
