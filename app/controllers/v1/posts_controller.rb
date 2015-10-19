@@ -6,6 +6,8 @@ module V1
     end
 
     def show
+      @post = posts_scope.find(params[:id])
+      render json: @post, serializer: post_serializer
     end
 
     private
