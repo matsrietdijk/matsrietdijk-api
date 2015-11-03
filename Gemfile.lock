@@ -294,7 +294,7 @@ DEPENDENCIES
   airbrake (~> 4.3.3)
   arel!
   bcrypt (~> 3.1.10)
-  brakeman (~> 3.1.1)
+  brakeman (~> 3.1.2)
   bundler (>= 1.10.6)
   codeclimate-test-reporter (~> 0.4.8)
   factory_girl_rails (~> 4.5.0)

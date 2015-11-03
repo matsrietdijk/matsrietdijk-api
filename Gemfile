@@ -35,7 +35,7 @@ group :development, :test do
   gem 'faker', '~> 1.5.0'
   gem 'rubocop', '~> 0.34.2', require: false
   gem 'rubocop-rspec', '~> 1.3.1'
-  gem 'brakeman', '~> 3.1.1', require: false
+  gem 'brakeman', '~> 3.1.2', require: false
 end
 
 group :development do
