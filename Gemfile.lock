@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/rack/rack.git
-  revision: 6216a3f8a3560639ee1ddadc1e0d6bf9e5f31830
+  revision: 35599cfc2751e0ee611c0ff799924b8e7fe0c0b4
   specs:
     rack (2.0.0.alpha)
       json
@@ -13,7 +13,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: 6c36c369be0cdd8f5f5b47f77ba79d492db98f32
+  revision: e670611e6002039231a24d547f9a6e053940fb16
   specs:
     actionmailer (5.0.0.alpha)
       actionpack (= 5.0.0.alpha)
@@ -71,7 +71,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/sass-rails.git
-  revision: a3b25261a3d31ed9ff5dd6e841b777790fc86c55
+  revision: 6e4eee736bcbfa5b2962467673c7a51abf434c67
   specs:
     sass-rails (6.0.0)
       railties (>= 4.0.0, < 5.0)
@@ -90,7 +90,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/sprockets.git
-  revision: 368ce3aec7857e0574ede2ac58954d75a0b20e28
+  revision: 5a77f8b007b8ec61edd783c48baf9d971f1c684d
   specs:
     sprockets (4.0.0)
       rack (>= 1, < 3)
@@ -110,7 +110,7 @@ GEM
     astrolabe (1.3.1)
       parser (~> 2.2)
     bcrypt (3.1.10)
-    brakeman (3.1.1)
+    brakeman (3.1.2)
       erubis (~> 2.6)
       fastercsv (~> 1.5)
       haml (>= 3.0, < 5.0)
@@ -118,6 +118,7 @@ GEM
       multi_json (~> 1.2)
       ruby2ruby (>= 2.1.1, < 2.3.0)
       ruby_parser (~> 3.7.0)
+      safe_yaml
       sass (~> 3.0)
       slim (>= 1.3.6, < 4.0)
       terminal-table (~> 1.4)
@@ -176,7 +177,7 @@ GEM
     method_source (0.8.2)
     mime-types (2.6.2)
     mini_portile (0.6.2)
-    minitest (5.8.1)
+    minitest (5.8.2)
     multi_json (1.11.2)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
@@ -251,13 +252,14 @@ GEM
     ruby2ruby (2.2.0)
       ruby_parser (~> 3.1)
       sexp_processor (~> 4.0)
-    ruby_parser (3.7.1)
+    ruby_parser (3.7.2)
       sexp_processor (~> 4.1)
+    safe_yaml (1.0.4)
     sass (3.4.19)
     sexp_processor (4.6.0)
-    shoulda-matchers (3.0.0)
+    shoulda-matchers (3.0.1)
       activesupport (>= 4.0.0)
-    sidekiq (3.5.1)
+    sidekiq (3.5.3)
       celluloid (~> 0.17.2)
       connection_pool (~> 2.2, >= 2.2.0)
       json (~> 1.0)
@@ -312,7 +314,7 @@ DEPENDENCIES
   rubocop-rspec (~> 1.3.1)
   sass-rails!
   shoulda-matchers (~> 3.0.0)
-  sidekiq (~> 3.5.1)
+  sidekiq (~> 3.5.3)
   simplecov (~> 0.10.0)
   spring
   sprockets!
