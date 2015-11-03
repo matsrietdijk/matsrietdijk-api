@@ -27,7 +27,7 @@ gem 'active_model_serializers', '~> 0.10.0.rc3'
 # gem 'rack-cors'
 gem 'aasm', '~> 4.4.0'
 gem 'kaminari', '~> 0.16.3'
-gem 'airbrake', '~> 4.3.2'
+gem 'airbrake', '~> 4.3.3'
 gem 'sidekiq', '~> 3.5.1'
 
 group :development, :test do

@@ -103,7 +103,7 @@ GEM
       actionpack (>= 4.0)
       activemodel (>= 4.0)
       railties (>= 4.0)
-    airbrake (4.3.2)
+    airbrake (4.3.3)
       builder
       multi_json
     ast (2.1.0)
@@ -289,7 +289,7 @@ PLATFORMS
 DEPENDENCIES
   aasm (~> 4.4.0)
   active_model_serializers (~> 0.10.0.rc3)
-  airbrake (~> 4.3.2)
+  airbrake (~> 4.3.3)
   arel!
   bcrypt (~> 3.1.10)
   brakeman (~> 3.1.1)
