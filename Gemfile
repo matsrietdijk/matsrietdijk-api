@@ -49,7 +49,7 @@ group :test do
   gem 'rspec-rails', '~> 3.1.0'
   gem 'rspec-sidekiq', '~> 2.1.0'
   gem 'rspec-its', '~> 1.2.0'
-  gem 'shoulda-matchers', '~> 3.0.0'
+  gem 'shoulda-matchers', '~> 3.0.1'
   gem 'rails-controller-testing', '~> 0.0.3'
 end
 
