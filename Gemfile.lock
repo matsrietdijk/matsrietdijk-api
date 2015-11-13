@@ -123,8 +123,7 @@ GEM
       slim (>= 1.3.6, < 4.0)
       terminal-table (~> 1.4)
     builder (3.2.2)
-    byebug (5.0.0)
-      columnize (= 0.9.0)
+    byebug (8.2.0)
     celluloid (0.17.2)
       celluloid-essentials
       celluloid-extras
@@ -145,7 +144,6 @@ GEM
     codeclimate-test-reporter (0.4.8)
       simplecov (>= 0.7.1, < 1.0.0)
     coderay (1.1.0)
-    columnize (0.9.0)
     concurrent-ruby (1.0.0.pre4)
     connection_pool (2.2.0)
     diff-lcs (1.2.5)
@@ -189,8 +187,8 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    pry-byebug (3.2.0)
-      byebug (~> 5.0)
+    pry-byebug (3.3.0)
+      byebug (~> 8.0)
       pry (~> 0.10)
     puma (2.15.3)
     rack-test (0.6.3)
@@ -301,7 +299,7 @@ DEPENDENCIES
   faker (~> 1.5.0)
   kaminari (~> 0.16.3)
   pg (~> 0.18.3)
-  pry-byebug (~> 3.2.0)
+  pry-byebug (~> 3.3.0)
   puma (~> 2.15.3)
   rack!
   rails!

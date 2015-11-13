@@ -40,7 +40,7 @@ end
 
 group :development do
   gem 'spring'
-  gem 'pry-byebug', '~> 3.2.0'
+  gem 'pry-byebug', '~> 3.3.0'
 end
 
 group :test do
