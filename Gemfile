@@ -15,7 +15,7 @@ gem 'pg', '~> 0.18.3'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.10'
 
-gem 'puma', '~> 2.14.0'
+gem 'puma', '~> 2.15.3'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -33,14 +33,14 @@ gem 'sidekiq', '~> 3.5.3'
 group :development, :test do
   gem 'factory_girl_rails', '~> 4.5.0'
   gem 'faker', '~> 1.5.0'
-  gem 'rubocop', '~> 0.34.2', require: false
+  gem 'rubocop', '~> 0.35.1', require: false
   gem 'rubocop-rspec', '~> 1.3.1'
   gem 'brakeman', '~> 3.1.2', require: false
 end
 
 group :development do
   gem 'spring'
-  gem 'pry-byebug', '~> 3.2.0'
+  gem 'pry-byebug', '~> 3.3.0'
 end
 
 group :test do
