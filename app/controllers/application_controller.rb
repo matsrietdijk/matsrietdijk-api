@@ -3,7 +3,13 @@ class ApplicationController < ActionController::API
 
   before_action :authenticate_user
 
+  rescue_from ActiveRecord::RecordNotFound, with: :render_not_found
+
   private
+
+  def render_not_found
+    head :not_found
+  end
 
   def authenticate_user
     user = authenticate_with_http_token do |token, options|

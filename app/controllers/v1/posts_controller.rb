@@ -5,6 +5,11 @@ module V1
       render json: @posts, meta: @posts.index_meta, each_serializer: post_serializer
     end
 
+    def show
+      @post = posts_scope.find(params[:id])
+      render json: @post, serializer: post_serializer
+    end
+
     private
 
     def posts_scope
