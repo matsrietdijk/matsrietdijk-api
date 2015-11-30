@@ -59,3 +59,7 @@ Configure Airbrake with:
 - `AIRBRAKE_SECURE`: set to `true` when using a secure connection, default: `false` unless port is `443` then `true`
 - `AIRBRAKE_SIDEKIQ`: set to `true` to use Sidekiq to handle notices, default: `false`
 - `AIRBRAKE_DEV`: set to `true` to enable airbrake in `development` environment, default: `false`
+
+# License
+
+Copyright &copy; 2015 Mats Rietdijk
