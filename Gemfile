@@ -44,7 +44,7 @@ group :development do
 end
 
 group :test do
-  gem 'simplecov', '~> 0.10.0', require: false
+  gem 'simplecov', '~> 0.11.0', require: false
   gem 'codeclimate-test-reporter', '~> 0.4.8', require: false
   gem 'rspec-rails', '~> 3.1.0'
   gem 'rspec-sidekiq', '~> 2.1.0'
