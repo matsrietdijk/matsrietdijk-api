@@ -32,7 +32,7 @@ gem 'sidekiq', '~> 4.0.1'
 
 group :development, :test do
   gem 'factory_girl_rails', '~> 4.5.0'
-  gem 'faker', '~> 1.5.0'
+  gem 'faker', '~> 1.6.1'
   gem 'rubocop', '~> 0.35.1', require: false
   gem 'rubocop-rspec', '~> 1.3.1'
   gem 'brakeman', '~> 3.1.2', require: false
